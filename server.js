@@ -5,7 +5,7 @@ app.use(express.static(__dirname + '/public'));
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const mysql = require('mysql');
-const PORT = 443;
+const PORT = 80;
 var products = new Array();
 var fullDb = new Array();
 
