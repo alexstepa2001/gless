@@ -1,0 +1,76 @@
+
+<section class="item_section">
+    <%for (let i = 0; i < dbLength; i++) {%>
+    <%if (id == products[i].id){%>
+    <div class="item_id" hidden>
+        <%= products[i].id%>
+    </div>
+    <div class="photo_sec">
+        <div class="item_photo">
+            <a data-fslightbox="gallery" href="<%= products[i].img%>">
+                <img class = "main_img" src="<%= products[i].img%>" alt="">
+            </a>
+        </div>
+        <div class="gallery">
+            <div class="clients_slider_wraper">
+                <div class="swiper-clients"> 
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <a data-fslightbox="gallery" href="<%= products[i].img%>">
+                                    <img src="<%= products[i].img%>" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <button class="all_desc">
+            Все характеристики
+        </button>
+        <div class="all_description">
+            <%= products[i].full_specifications%>
+        </div>
+    </div>
+    <div class="description_sec">
+        <div class="description">
+            <h1><%= products[i].name%></h1>
+            <div class="first_line">
+                <div class="price">
+                    <h4 class = "real_price"><%= products[i].real_price%></h4>
+                    <h5 class = "price_wo_sale"><%= products[i].full_price%></h5>
+                </div>
+                <div class="col">
+                    <p class = "choose_col">Выбрать количество:</p>
+                    <div class="chose_col">
+                        <button class = "col_but">-</button>
+                        <div class="real_col"> 
+                            1
+                        </div>
+                        <button class = "col_but">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main_buttons">
+                <button class="in_cart">
+                    В корзину 
+                </button>
+                <button class="to_comparison">
+                    Добавить к сравнению
+                </button>
+            </div>
+            <div class="specifications">
+                <%= products[i].specifications%>
+            </div>
+            <div class="real_desc">
+                <%= products[i].description%>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <%}%>
+    <%}%>
+</section>

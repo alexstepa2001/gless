@@ -1,0 +1,135 @@
+<div class="empty">
+
+</div>
+<header class="header">
+    <div class="header_top">
+        <div class="header_left">
+            <button class="hamburger hamburger--slider js-menu-toggle" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a href="index" class = "logo">
+                <img src="img/Logo.svg" alt="" class="logo_img">
+            </a>
+            <nav class="header_nav">
+                <div class = "navigation">
+                    <a href="catalog">
+                        <div class="nav_button">
+                            Каталог
+                        </div>
+                    </a>
+                    <a href="about">
+                        <div class="nav_button">
+                            О нас
+                        </div>
+                    </a>
+                    <a href="payment">
+                        <div class="nav_button">
+                            Оплата
+                        </div>
+                    </a>
+                    <a href="questions">
+                        <div class="nav_button">
+                            Готовые проекты
+                        </div>
+                    </a>
+                    <a href="contacts">
+                        <div class="nav_button">
+                            Контакты 
+                        </div>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <div class="header_right">
+            <form action="/search_result" method="" class = "search">
+                <input type="search" name="search" id="" class = "search_input">
+            </form>
+            <div class="header_contacts">
+                <a target = "_blank" class = "phone_a" href="tel:+78314235186">
+                    <img src="img/ant-design_phone-outlined.svg" alt="" class = "phone_link">
+                    <p>+7 (831) 423-51-86</p>
+                </a>
+                <a target = "_blank" class = "mail_a"  href="mailto:glessnn@yandex.ru">
+                    <img src="img/ant-design_mail-outlined.svg" alt="" class = "mail_link">
+                    <p>glessnn@yandex.ru</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <div class="timetable">
+            Пн-Сб: 10:00 - 19:00
+        </div>
+        <div class="header_bottom_right">
+            <div class = "shopping_list">
+                <img class = "cart" src="img/cart.svg" alt="">
+                <div class="items_in_cart">
+                    0
+                </div>
+                <div class="list">
+                    <p class = "cart_is_empty none">Ваша корзина пуста</p>
+                    <div class="final_price_wrapper">
+                        <div class="final_price">
+                            Итого: 
+                            <p class = "final">0</p>
+                        </div>
+                        <a href="payment_methods" class = "to_payment">
+                            <button class="to_payment_button">
+                                Оплатить
+                            </button>
+                        </a>
+                        <div class="remove_all">
+                            <button class = "remove_all_items">
+                                Удалить все
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="">
+                <div class="account">
+                    <img src="img/account.svg" alt="">
+                    Личный кабинет
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mobile_nav">
+    <a href="catalog">
+        <div class="mobile_nav_button">
+            Каталог
+        </div>
+    </a>
+    <a href="about">
+        <div class="mobile_nav_button">
+            О нас
+        </div>
+    </a>
+    <a href="payment">
+        <div class="mobile_nav_button">
+            Оплата
+        </div>
+    </a>
+    <a href="questions">
+        <div class="mobile_nav_button">
+            Готовые проекты
+        </div>
+    </a>
+    <a href="contacts">
+        <div class="mobile_nav_button">
+            Контакты 
+        </div>
+    </a>
+</div>
+<script src="js/header.js"></script>
+<script>
+    var dbLength = <%=fullDbLength%>;
+    var products = <%- JSON.stringify(fullDb)%>;
+    var fullDbLength = <%=fullDbLength%>;
+    var fullDb = <%- JSON.stringify(fullDb)%>;
+</script>
+<script src="js/cart.js"></script>

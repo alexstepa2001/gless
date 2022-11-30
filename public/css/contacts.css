@@ -1,0 +1,73 @@
+.contacts_section{
+    color: #525882;
+}
+a{
+    color: #525882;
+}
+body{
+    background-color: #fff;
+}
+h1{
+    font-size: 35px;
+    color: #525882;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+.location{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.contacts_block{
+    padding: 40px;
+}
+.contacts_block img{
+    margin-right: 40px;
+}
+.phone{
+    display: flex;
+    align-items: center;
+}
+.mail{
+    display: flex;
+    align-items: center;
+}
+.time{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.phoneandmail{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.phone h2{
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 740px){
+    .phoneandmail{
+        flex-direction: column;
+        align-items: start;
+    }
+    .phone{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 720px){
+    h1{
+        padding: 40px 20px 40px 20px;
+        margin-bottom: 0px;
+        font-size: 30px;
+    }
+    .contacts_block{
+        padding: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .contacts_block img{
+        margin-right: 20px;
+    }
+}

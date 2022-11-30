@@ -1,0 +1,28 @@
+<section class="pay_section">
+    <div class="pay_left">
+        <h1>Оплата</h1>
+        <div class="final_sum">
+            Сумма вашего заказа: 
+            <p style = "color:brown; font-size: 30px;" class = "final_sum_count"></p>
+            <script> document.querySelector('.final_sum_count').innerHTML = `${finalPrice.innerHTML} руб` </script>
+        </div>
+        <div class="methods">
+            <a href="404">
+                <button class="method_button">Картой онлайн</button>
+            </a>
+            <a href="office_payment">
+                <button class="method_button">Оплата наличными</button>
+            </a>
+            <a href="404">
+                <button class="method_button">Выставить счёт</button>
+            </a>
+        </div>
+    </div>
+    <div class="pay_right">
+        <div class="img_animate_section">
+            <img class = "layer_1" src="img/Frame.svg" alt="">
+            <img class = "layer_2" src="img/circle.svg" alt="">
+            <img class = "layer_3" src="img/Character.svg" alt="">
+        </div>
+    </div>
+</section>

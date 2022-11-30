@@ -1,0 +1,69 @@
+<section class="items_section">
+    <div class="sort_line">
+        <button class="filters_button">
+            Фильтры
+        </button>
+        <button class="sort_button">
+            <p>Сортировать</p>
+            <img src="img/ic_round-sort.svg" alt="">
+        </button>
+    </div>
+    <div class="break">
+        <% if (page > 1) {%> <a href="items?page=<%=page-1%>&category=<%=category%>">Назад</a> <% } %>
+        <% for (let i = iterator; i <= endingLink; i++){%>
+            <% if (i === page) {%>
+                <a class = "selectedLink" href="items?page=<%=i%>&category=<%=category%>"><%=i%></a>
+                <% continue; %>
+            <% } %>
+            <a href="items?page=<%=i%>&category=<%=category%>"><%=i%></a>
+        <% } %>
+        <% if (page < numberOfPages) {%> <a href="items?page=<%=page+1%>&category=<%=category%>">Вперёд</a> <% } %>
+    </div>
+    <div class="all_items">
+        <% for (let i = 0; i < dbLength; i++) {%>
+        <div class="items_item">
+            <a href = "item?id=<%= products[i].id%>&category=<%=category%>">
+                <div class="img_item">
+                    <img src="<%= products[i].img%>" alt="">
+                </div>
+                <h2 class = "item_name">
+                    <%= products[i].name%>
+                </h2>
+                <div class="price">
+                    <div class="real_price">
+                        <%= products[i].real_price%>
+                    </div>
+                    <% if (products[i].real_price != products[i].full_price){%>
+                    <div class="price_wo_sale">
+                        <%= products[i].full_price%>
+                    </div>
+                    <%}%>
+                </div>
+            </a>
+            <button class="buy_button">
+                В корзину
+            </button>
+            <div class="product_id" hidden>
+                <%= products[i].id%>
+            </div>
+        </div>
+        <%}%>
+    </div>
+    <div class="break">
+        <% if (page > 1) {%> <a href="items?page=<%=page-1%>&category=<%=category%>">Назад</a> <% } %>
+        <% for (let i = iterator; i <= endingLink; i++){%>
+            <% if (i === page) {%>
+                <a class = "selectedLink" href="items?page=<%=i%>&category=<%=category%>"><%=i%></a>
+                <% continue; %>
+            <% } %>
+            <a href="items?page=<%=i%>&category=<%=category%>"><%=i%></a>
+        <% } %>
+        <% if (page < numberOfPages) {%> <a href="items?page=<%=page+1%>&category=<%=category%>">Вперёд</a> <% } %>
+    </div>
+    <div class="sort_menu">
+        <div class="price_up">Дешевле</div>
+        <div class="price_down">Дороже</div>
+        <div class="popular">Популярнее</div>
+    </div>
+    <script src="js/sort.js"></script>
+</section>

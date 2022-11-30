@@ -1,0 +1,125 @@
+.pay_section{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.office_section{
+    padding: 40px;
+}
+h1{
+    color: #525882;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.final_sum{
+    font-size: 20px;
+}
+.methods{
+    display: flex;
+    flex-direction: column;
+}
+.methods a{
+    height: 50px;
+    margin-top: 20px;
+}
+.method_button{
+    height: 50px;
+    width: 230px;
+    border: none;
+    border-radius: 10px;
+    background-color: #525882;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.method_button:hover{
+    background-color: #fff;
+    color: #525882;
+    border: 1px solid #525882;
+}
+.methods a:first-child{
+    margin-top: 50px;
+}
+.img_animate_section{
+    position: relative;
+    width: 444.35px;
+    margin-top: 30px;
+}
+.img_animate_section img{
+    position: absolute;
+}
+.layer_1{
+    z-index: 1;
+}
+.layer_2{
+    z-index: 2;
+    left: 91px;
+    top: 38.57px;
+    animation: Rotate 15s linear infinite;
+}
+.layer_3{
+    z-index: 3;
+    left: 147.41px;
+    top: 22.17px;
+}
+.order_office{
+    width: 250px;
+    height: 60px;
+    background-color: #525882;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.order_office:hover{
+    background-color: #fff;
+    color: #525882;
+    border: 1px solid #525882;
+}
+.pay_right{
+    height: 450px;
+}
+@keyframes Rotate{
+    0% {
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:1050px){
+    .pay_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pay_right{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:530px){
+    .layer_1{
+        width: 200px;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+    }
+    .layer_2{
+        width: 130px;
+        transform: translate(-50%, 0);
+        left: 35px;
+        top: 20px;
+    }
+    .layer_3{
+        width: 82.25px;
+        transform: translate(-50%, 0);
+        left: 100px;
+        top: 10px;
+    }
+    .img_animate_section{
+        width: 200px;
+    }
+}

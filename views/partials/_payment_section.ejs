@@ -1,0 +1,104 @@
+<section class="payment_section">
+    <h1>Способы оплаты</h1>
+    <div class="payment_methods">
+        <div class="methods">
+            <a href = "#card_method" class="method">
+                <div class="method_desc">
+                    <img src="img/pay1.svg" alt="">
+                </div>
+                <div class="method_name">
+                    <h3>Оплата банковской картой на сайте</h3>
+                </div>
+            </a>
+            <a href = "#cash_method" class="method">
+                <div class="method_desc">
+                    <img src="img/pay2.svg" alt="">
+                </div>
+                <div class="method_name">
+                    <h3>Оплата наличными или картой в офисе</h3> 
+                </div>  
+            </a>
+            <a href = "#acc_method" class="method"> 
+                <div class="method_desc">
+                    <img src="img/pay3.svg" alt="">
+                </div>
+                <div class="method_name">
+                    <h3>Оплата на расчётный счёт (Для Юр. Лиц)</h3>
+                </div>
+            </a>
+        </div>
+        <div class="payment_img">
+
+        </div>
+    </div>
+    <div class="card_method" id = "card_method">
+        <div class="method_text">
+            <h2>
+                Оплата банковской картой на сайте
+            </h2>
+            <p>Для выполнения оплаты по банковской карте Вам необходимо перейти в корзину и нажать на кнопку "Сделать заказ". После этого Вы перейдёте на страницу оплаты сервиса "ЮMoney". После проверки итоговой суммы введите данные своей банковской карты. Если введённые данные соответствуют действительности, средства спишутся с вашей карты, а информация о заказе поступит нам. Время обработки заказа зависит от количества товаров. 
+                
+                <br><br>Время обработки заказа зависит от количества товаров.</p>
+        </div>
+        <div class="method_video">
+            <iframe src="https://www.youtube.com/embed/-FTT_n5F2vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+    </div>
+    <div class="card_method method_reverse" id = "cash_method">
+        <div class="method_text">
+            <h2>
+                Оплата наличными
+            </h2>
+            <p>Если Вы хотите оплатить выбранные Вами товары за наличный расчет, необходимо выбрать пункт "Оплата наличными" во вкладке "Оплата". <br><br>Оплата наличными производится в точках розничных продаж либо в офисе (см. Раздел <a href="contacts">контакты</a>). При оплате за наличный расчет выдается кассовый и товарный чек. Также возможна отправка чека на указанный Вами электронный адрес.</p>
+        </div>
+        <div class="method_video reverse">
+            <iframe src="https://www.youtube.com/embed/-FTT_n5F2vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+    </div>
+    <div class="card_method"> 
+        <div class="method_text" id = "acc_method">
+            <h2>
+                Оплата на расчётный счёт<br> 
+                (Для Юридических Лиц)
+            </h2>
+            <p>Для выставления счета на оплату по безналичному расчету (ИП или Организация) необходимо выслать на почту <a href="mailto:glessnn@yandex.ru">glessnn@yandex.ru</a> реквизиты организации с указанием <br><br>1) Наименование организации <br><br> 2) ИНН и КПП организации <br><br> 3) Расчетный счет с указанием банка <br><br> 4) Контактное лицо с указанием электронной почты, телефона для связи. <br><br> Счет будет выслан на указанную электронную почту и действителен при оплате в течение трех банковских дней. <br><br> При заключении договора между организациями возможно предоставление других условий оплаты (оплата по факту поступления товара в течение пяти дней после поставки) либо предоставление отсрочки платежа. </p>
+        </div>
+        <div class="method_video">
+            <iframe src="https://www.youtube.com/embed/-FTT_n5F2vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+    </div>
+    <div class="next">
+        <h2>Что делать дальше?</h2>
+        <div class="next_main_section">
+            <div class="question">
+                Расчётные сроки доставки
+                <img src="img/akar-icons_cross.svg" alt=""  class = "ques_img">
+            </div>
+            <div class="answer">
+                <p>
+                    Примерные сроки доставки обговариваются при заключении договора (подтверждении заказа). Возмоожна отправка транспортными компаниями:<br> "Деловые линии", "ПЭК", "СДЭК", "КИТ", "Байкал-сервис".
+                </p>
+            </div>
+            <div class="question">
+                Сборка
+                <img src="img/akar-icons_cross.svg" alt="" class = "ques_img">
+            </div>
+            <div class="answer">
+                <p>
+                    При необходимости возможен выезд наших специалистов для сборки. Стоимость услуги рассчитывается для каждого товара отдельно. Заказать данную услугу можно, связавшись с нами по телефону.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const question = document.querySelectorAll('.question');
+        const answer = document.querySelectorAll('.answer');
+        const quesImg = document.querySelectorAll('.ques_img'); 
+        for(let i = 0; i < question.length; i++){
+            question[i].addEventListener('click', () => {
+            answer[i].classList.toggle('active');
+            quesImg[i].classList.toggle('img_active');
+        })
+        }
+    </script>
+</section>
